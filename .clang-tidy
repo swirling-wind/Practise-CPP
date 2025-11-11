@@ -1,19 +1,24 @@
 Checks: >
-    *,
-    -abseil-*,
-    -altera-*,
-    -fuchsia-*,
-    -android-*,
-    -cppcoreguidelines-avoid-magic-numbers,
-    -readability-magic-numbers,
-    -modernize-use-trailing-return-type,
-    -llvmlibc-*
-    
+  bugprone-*,
+  readability-*,
+  performance-*,
+  cppcoreguidelines-*,
+  clang-analyzer-*,
+  misc-*,
+  portability-*,
+  modernize-*,
+  hicpp-*,
+  -readability-identifier-length,
+  -readability-magic-numbers,
+  -cppcoreguidelines-avoid-magic-numbers,
+  -modernize-use-trailing-return-type,
+  -readability-function-cognitive-complexity
+
 CheckOptions:
   - key: modernize-use-nullptr.NullMacros
     value: 'NULL'
   - key: readability-identifier-length.MinVariableNameLength
     value: '1'
-    
+
 HeaderFilterRegex: '.*'
 FormatStyle: file

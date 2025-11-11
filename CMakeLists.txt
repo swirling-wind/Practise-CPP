@@ -9,13 +9,6 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 # 使用MSVC兼容模式
 set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>DLL")
 
-# 启用 clang-tidy
-set(CMAKE_CXX_CLANG_TIDY 
-    "D:/LLVM/bin/clang-tidy.exe"
-    -header-filter=.*
-    -extra-arg=-std=c++23
-)
-
 # 设置默认构建类型
 if(NOT CMAKE_BUILD_TYPE)
     set(CMAKE_BUILD_TYPE Debug)
